@@ -1,0 +1,10 @@
+{% extends 'todo_app/base.html' %}
+{% block content %}
+<div class="text-center mt-5">
+    <h1 class="display-3">500 - Server Error 💥</h1>
+    <p class="lead">Something exploded. Probably not your fault.</p>
+    <img src="https://media.giphy.com/media/fAnEC88LccN7a/giphy.gif" alt="Server error" class="img-fluid rounded" style="max-height: 300px;">
+    <br><br>
+    <a href="{% url 'task_list' %}" class="btn btn-primary">Try Again</a>
+</div>
+{% endblock %}

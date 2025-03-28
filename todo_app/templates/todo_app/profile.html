@@ -1,0 +1,14 @@
+{% extends 'todo_app/base.html' %}
+{% block content %}
+<div class="card shadow p-4">
+    <h2 class="mb-3">👤 User Profile</h2>
+    <p><strong>Username:</strong> {{ user.username }}</p>
+    <p><strong>Email:</strong> {{ user.email|default:"Not set" }}</p>
+
+    <hr>
+    
+    <a href="{% url 'password_change' %}" class="btn btn-sm btn-outline-secondary ms-2">Change Password</a>
+    <a href="{% url 'delete_account' %}" class="btn btn-outline-danger mt-3">🗑️ Delete Account</a>
+    <a href="{% url 'task_list' %}" class="btn btn-outline-primary mt-2">🏠 Back to Home</a>
+</div>
+{% endblock %}

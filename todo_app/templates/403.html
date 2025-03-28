@@ -1,0 +1,10 @@
+{% extends 'todo_app/base.html' %}
+{% block content %}
+<div class="text-center mt-5">
+    <h1 class="display-3">403 - Forbidden 🔒</h1>
+    <p class="lead">You’re not allowed here, buddy.</p>
+    <img src="https://media.giphy.com/media/l2JHRhAtnJSDNJ2py/giphy.gif" alt="No access" class="img-fluid rounded" style="max-height: 300px;">
+    <br><br>
+    <a href="{% url 'task_list' %}" class="btn btn-primary">Back to Home</a>
+</div>
+{% endblock %}
