@@ -1,15 +1,12 @@
 from django.shortcuts import render, redirect, get_object_or_404
+from django.contrib import messages
+from django.contrib.auth import login, logout
 from django.contrib.auth.decorators import login_required
-from .models import Task
-from .forms import TaskForm
-from django.contrib.auth import login
-from .forms import RegisterForm
-from django.contrib import messages
 from django.contrib.auth.views import LoginView
-from django.contrib import messages
 from django.db.models import Q
-from django.contrib.auth import logout
-from django.core.exceptions import PermissionDenied
+
+from .models import Task
+from .forms import TaskForm, RegisterForm
 
 
 @login_required

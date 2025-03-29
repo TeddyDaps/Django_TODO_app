@@ -16,11 +16,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from django.contrib.auth.views import LoginView, LogoutView
-from todo_app.views import register_view , CustomLoginView
-from todo_app.views import profile_view
+
+# Auth Views
 from django.contrib.auth import views as auth_views
-from todo_app.views import delete_account_view
+from todo_app.views import CustomLoginView, register_view, delete_account_view, profile_view
+from django.contrib.auth.views import LoginView, LogoutView
 
 
 
